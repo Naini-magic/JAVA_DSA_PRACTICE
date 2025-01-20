@@ -1,11 +1,12 @@
+import java.util.*;
 public class p1 {
     public static void main(String[] args) {
         int[] arr1 = {0 , 2 , 1 , 2 , 0};
-        System.err.println(sort(arr1));
+        System.err.println(Arrays.toString(sort(arr1)));
     }
     static int[] sort(int arr[]){
         int i = 0;
-      while(i < arr.length){
+      while(i < arr.length-1){
         if(arr[i] == arr[i+1]){
             i++;
         }
