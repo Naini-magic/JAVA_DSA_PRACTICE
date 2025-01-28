@@ -1,4 +1,3 @@
-import java.util.HashMap;
 public class ls7_Count{
     public static void main(String [] args){
         int arr[] ={3, 1, 3, 3, 2};
@@ -37,7 +36,7 @@ public class ls7_Count{
         }
 
         return -1;
-       }
+       }ls
 
 
 
