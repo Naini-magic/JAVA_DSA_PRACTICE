@@ -1,5 +1,24 @@
 public class ls14MinSwap{
 
+    // O(nlogn) 
+
+    public static int MINSWAP(int arr[]){
+        int [][] sortArr = new int[n][2];
+        for(int i = 0 ; i < arr.length ; i++){
+            sortArr[i][0] = arr[i];
+            sortArr[i][1] = i;
+        }
+
+        //We can use lambda expressions or Comparator.comparing() for custom sorting.
+          // Syntax: Arrays.sort(array, Comparator.comparingInt(a -> a[columnIndex]));
+        Arrays.sort(sortArr , Comparator.comparingInt(a -> a[columnIndex]));
+
+        for(int i = 0 ; i < sortArr.length ; i++){
+            if(sortArr[i][1] != i){
+               
+            }
+        }
+    }
 
 
     // my approach tc - O(n2) this is not good
