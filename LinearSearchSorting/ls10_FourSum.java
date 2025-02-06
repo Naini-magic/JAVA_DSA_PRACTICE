@@ -49,7 +49,6 @@ public class ls10_FourSum{
                 }
             }
         }
-
         return result;
     }
 

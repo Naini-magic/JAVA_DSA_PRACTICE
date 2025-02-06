@@ -1,8 +1,10 @@
+import java.util.*;
 public class ls14MinSwap{
 
     // O(nlogn) 
 
     public static int MINSWAP(int arr[]){
+        int n = arr.length;
         int [][] sortArr = new int[n][2];
         for(int i = 0 ; i < arr.length ; i++){
             sortArr[i][0] = arr[i];
@@ -11,13 +13,31 @@ public class ls14MinSwap{
 
         //We can use lambda expressions or Comparator.comparing() for custom sorting.
           // Syntax: Arrays.sort(array, Comparator.comparingInt(a -> a[columnIndex]));
-        Arrays.sort(sortArr , Comparator.comparingInt(a -> a[columnIndex]));
+        Arrays.sort(sortArr , Comparator.comparingInt(a -> a[0]));
+
+        boolean [] visited = new boolean[n];
+        int swaps = 0;
 
         for(int i = 0 ; i < sortArr.length ; i++){
-            if(sortArr[i][1] != i){
-               
+            if(visited[i] || sortArr[i][1] == i){
+               continue;
+            }
+
+            int cycleSize = 0;
+            int j = i ;
+            
+            while(!visited[j]){
+                visited[j] = true;
+                j = sortArr[j][1];
+                cycleSize++;
+            }
+
+
+            if(cycleSize > 1) {
+                swaps += (cycleSize - 1);
             }
         }
+        return swaps;
     }
 
 
@@ -45,11 +65,11 @@ public class ls14MinSwap{
     }
     public static void main(String []args){
            int arr[] = {2, 8, 5, 4};
-           System.out.println(minSwap(arr));
+           System.out.println(MINSWAP(arr));
            int arr2[] = {10, 19, 6, 3, 5};
-           System.out.println(minSwap(arr2));
-           int arr3[] = {1, 3, 4, 5, 6};
-           System.out.println(minSwap(arr3));
+           System.out.println(MINSWAP(arr2));
+           int arr3[] = {10, 10, 10};
+           System.out.println(MINSWAP(arr3));
 
     }
 }
