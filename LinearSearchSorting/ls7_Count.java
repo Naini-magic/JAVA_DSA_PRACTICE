@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class ls7_Count{
     public static void main(String [] args){
         int arr[] ={3, 1, 3, 3, 2};
@@ -8,6 +10,8 @@ public class ls7_Count{
 
             }
 
+
+            // TC - O(n)   || SC - (1)
        public static int Majority(int arr[]){
         int candidate = -1;
         int count = 0;
@@ -36,13 +40,13 @@ public class ls7_Count{
         }
 
         return -1;
-       }ls
+       }
 
 
 
 
 
-    // solution tc - O(n) sc - O(n) becauce hashmap
+    // solution tc - O(n) ||||| SC - O(n) becauce hashmap
     public static int majority_Element(int arr[]){
         HashMap<Integer, Integer> map = new HashMap<>();
 
