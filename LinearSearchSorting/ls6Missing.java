@@ -1,19 +1,22 @@
 import java.util.Arrays;
 public class ls6Missing {
+
+
+    // time complixity O(nlogn)
     public static void missing(int arr[]){
         int n = arr.length ;
         Arrays.sort(arr);
         int repeat = -1;
         int sum =0;
-       for(int i = 0 ; i < arr.length ; i++){
+       for(int i = 0 ; i < n - 1 ; i++){
         sum +=arr[i];
-        if(i < arr.length && arr[i] == arr[i+1]){
+        if(arr[i] == arr[i+1]){
          repeat = arr[i];
-         
         }
-       }
+    }
+        sum += arr[n - 1];
 
-       int totalsum = n*(n+1)/2;
+       int totalsum = (n*(n+1))/2;
        System.out.println(repeat);
        
        int ans = sum - repeat;

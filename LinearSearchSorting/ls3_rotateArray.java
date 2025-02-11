@@ -48,7 +48,7 @@ public class ls3_rotateArray {
         if(arr[start] >= arr[mid]){
             end = mid;
         }else{
-            start = mid -1;
+            start = mid + 1;
         }
        }
        return -1;
@@ -57,7 +57,7 @@ public class ls3_rotateArray {
 
     public static void main(String[] args){
         int arr[] = { 3 , 4 ,5 , 6 , 7 , 0 , 1 , 2};
-int target = 6;
+        int target = 6;
         System.out.println(rotate(arr, target));
         System.out.println(findPivot(arr));
     } 
