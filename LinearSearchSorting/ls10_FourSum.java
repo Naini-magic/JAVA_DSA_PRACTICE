@@ -3,24 +3,10 @@ import java.util.*;
 public class ls10_FourSum{
 
 
-    // public static List<List<Integer>> fourSum(int []arr , int target){
-    //     List<List<Integer>> ans = new List<>();
-    //     for(int i = 0 ; i < arr.length-3 ; i++){
-    //         int sum = arr[i];
-    //         for(int j = i+1; j =< j+2 ; j++){
-    //            sum += arr[j]
-    //         }
-    //     }
-    // }
-    // public static void main(String [] args){
-    //     int arr[] = {0, 0, 2, 1, 1};
-    // }
-
-
     public static List<List<Integer>> fourSum(int[] arr, int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(arr); // Step 1: Sort the array
-        int n = arr.length;
+        int n = arr.length; 
 
         for (int i = 0; i < n - 3; i++) {
             if (i > 0 && arr[i] == arr[i - 1]) continue; // Skip duplicates for i
@@ -60,5 +46,6 @@ public class ls10_FourSum{
         int[] arr2 = {10, 2, 3, 4, 5, 7, 8};
         int target2 = 23;
         System.out.println(fourSum(arr2, target2)); // Output: [[2, 3, 8, 10], [2, 4, 7, 10], [3, 5, 7, 8]]
-
+           
+        System.out.print(fourSum1(arr2, target2));
 }}

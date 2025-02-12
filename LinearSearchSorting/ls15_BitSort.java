@@ -39,7 +39,7 @@ public class ls15_BitSort{
             int countA = Integer.bitCount(a);
             int countB = Integer.bitCount(b);
             return countB - countA ;
-        });
+        }); 
     }
     public static void main(String []args){
         Integer arr[] = {3,7,8,9};

@@ -14,6 +14,7 @@ public class ls18_Height{
         
         int low = 0;
         int high = Arrays.stream(arr).max().getAsInt();
+        System.out.println(high);
         int result = 0;
 
         while(low <= high){
@@ -23,12 +24,17 @@ public class ls18_Height{
             if(wood_coll >= hei_req){
                 result = mid;
                 low = mid + 1;
+                System.out.println("low - "+ low);
             }else{
                 high = mid - 1;
+                System.out.println("high - "+ high);
             }
         }
         return result;
     }
+
+
+    
     public static void main(String [] args){
         int arr[] = {4 , 42 , 40 , 26 , 46};
         int h = 20;

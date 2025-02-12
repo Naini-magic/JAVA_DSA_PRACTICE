@@ -36,6 +36,9 @@ public class ls16_k_thElement{
 
         return arr[v-1];
     }
+
+
+    
     public static void main (String [] args){
         int ar1[] = {2, 3, 6, 7, 9};
         int ar2[] = {1, 4, 8, 10};

@@ -20,10 +20,10 @@ public static void main(String []args){
         return (a == b) ? 1 : 0;
     }
     
- if((b - a) % c == 0  && (b - a) / c >= 0){
-    return 1;
-}else{
-    return 0;
+      if((b - a) % c == 0  && (b - a) / c >= 0){
+         return 1;
+      }else{
+        return 0;
 }
  }
 }

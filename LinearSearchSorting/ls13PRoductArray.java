@@ -1,3 +1,6 @@
+/*Given an array, arr[] construct a product array, res[] where each element in res[i] is the product of all elements in arr[] except arr[i]. Return this resultant array, res[].
+Note: Each element is res[] lies inside the 32-bit integer range. */
+
 import java.util.*;
 public class ls13PRoductArray{
 
@@ -60,5 +63,5 @@ public class ls13PRoductArray{
       System.out.println(Arrays.toString(PRoduct((arr1))));
       int arr2[] = {11 , 4 , 5 , 6 , 7 ,0};
       System.out.println(Arrays.toString(PRoduct((arr2))));
-    }
+    } 
 }
