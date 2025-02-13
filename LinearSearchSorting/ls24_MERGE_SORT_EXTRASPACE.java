@@ -24,15 +24,17 @@ public class ls24_MERGE_SORT_EXTRASPACE{
 //Gap Method , time complexity - O(n log n)
     public static void gapmethodofsort(int arr[] , int start , int mid , int end ){
       
-        int gap = end - start + 1;
+        int gap = end - start + 1; // Step 1: Initialize gap = end - start + 1 (length of the current subarray).
 
         while(gap > 1){
-            gap = (gap + 1) / 2;
+            gap = (gap + 1) / 2; // Step 2: Reduce gap gradually using gap reduction formula:
+                  
 
-            int i = start , j = start + gap;
+            int i = start , j = start + gap; // Step 3: Use two pointers (i and j) to compare elements at a distance of gap.
+
             while( j <= end){
                 if(arr[i] > arr[j]){
-                    // swap element if they are out of order
+                  //  Step 4: Swap elements if they are in the wrong order.
                     int temp = arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;
@@ -40,7 +42,8 @@ public class ls24_MERGE_SORT_EXTRASPACE{
                 i++;
                 j++;
             }
-        }
+        }//Step 5: Continue reducing gap until the subarray is fully merged and sorted.
+
     }
 
 
