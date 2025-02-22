@@ -12,7 +12,7 @@ class Node {
 
 class Solution {
     // Function to merge K sorted linked lists
-    static Node l21_mergeK_list(Node[] arr, int k) {
+    static Node l21_mergeK_listl23_(Node[] arr, int k) {
         // Priority Queue (Min Heap) to store nodes based on their data value
         PriorityQueue<Node> minHeap = new PriorityQueue<>((a, b) -> a.data - b.data);
 
