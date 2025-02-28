@@ -1,27 +1,26 @@
 public class p10_duplicateNO {
     public static void main(String[] args) {
-        
+        int arr[] = {1 , 3 , 2, 3, 4 , 5};
+        System.out.println(findDuplicate(arr));
+
     }
  
-    public static int DuplicateNo(int []arr){
-        int i = 0;
-        int t = arr[i];            
-        int step = (arr.length-1)-i;
-        while (i < arr.length) {
-            
 
-        if(t == arr[i] ){
-            return arr[i];
+    // Floyd’s Tortoise and Hare Algorithm
+        public static int findDuplicate(int[] arr) {
+        int slow = arr[0];
+        int fast = arr[0];
+
+        do{
+            slow = arr[slow];
+            fast = arr[arr[fast]];
+        }while(slow != fast);
+
+        fast = arr[0];
+        while(slow != fast){
+            slow = arr[slow];
+            fast = arr[fast];
         }
-        else{
-            i++;
-            step--;
-        }
-        if(step==0 && arr[i] != t){
-            t = arr[]
-        }
-        }
-    
-    
-    }
-}
+        return slow;
+
+}}
