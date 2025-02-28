@@ -8,7 +8,7 @@ public class p6Kadane_Algo {
         System.out.println(max(arr2));
         System.out.println(max(arr3));
 
-        System.out.println(min(arr3));
+        // System.out.println(min(arr3));
     }
 
     public static int max(int arr[]) {
