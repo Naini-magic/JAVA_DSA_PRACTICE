@@ -13,7 +13,7 @@ public class ls22SubSum{
    }
    }
    public static void main(){
-    int arr[] = {3 , 1 , -2 , , 3};
+    int arr[] = {3 , 1 , -2 ,3};
     int a = -1;
     int b = 3 ;
    }

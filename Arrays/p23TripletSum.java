@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class p23TripletSum {
     public static void main(String[] args) {
-        int n = 6, x = 13;
+        int x = 13;
         int arr[] = { 1, 4, 45, 6, 10, 8 };
         System.out.println(TripletSum(arr, x));
     }

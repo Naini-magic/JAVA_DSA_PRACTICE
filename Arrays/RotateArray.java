@@ -1,7 +1,3 @@
-public class p5 {
-    
-}
-
 
 import java.util.Arrays;
 

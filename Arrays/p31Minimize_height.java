@@ -9,7 +9,7 @@ public class p31Minimize_height {
     int n = arr.length;
     int max = arr[n - 1];
     int min = arr[0];
-    int d = max  - min ;
+    // int d = max  - min ;
 
     for(int i = 1 ; i < arr.length ; i++ ){
         if(arr[i] - k < 0){ continue; }

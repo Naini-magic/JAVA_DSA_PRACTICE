@@ -47,5 +47,5 @@ public class ls10_FourSum{
         int target2 = 23;
         System.out.println(fourSum(arr2, target2)); // Output: [[2, 3, 8, 10], [2, 4, 7, 10], [3, 5, 7, 8]]
            
-        System.out.print(fourSum1(arr2, target2));
+        // System.out.print(fourSum1(arr2, target2));
 }}

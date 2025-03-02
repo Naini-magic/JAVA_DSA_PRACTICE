@@ -1,18 +1,18 @@
 
 class Solution {
-    boolean isCircular(Node head) {
-        // Your code here
-        if(head == null) return false;
-        Node temp = head.next;
-        while(temp !=null && temp != head){
-            temp = temp.next;
-        }
-        return temp == head;
-    }
+//    public static boolean isCircular(Node head) {
+//         // Your code here
+//         if(head == null) return false;
+//         Node temp = head.next;
+//         while(temp !=null && temp != head){
+//             temp = temp.next;
+//         }
+//         return temp == head;
+//     }
 
 
     
-        boolean isCircular(Node head) {
+       public static boolean isCircular(Node head) {
         if(head == null) {return false;}
         if(head.next == head){return true;}
         Node slow = head;

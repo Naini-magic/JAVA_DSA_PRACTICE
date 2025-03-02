@@ -5,7 +5,7 @@ The Union of the two arrays can be defined as the set containing distinct elemen
 Note: Elements are not necessarily distinct.*/
 
 
-
+import java.util.*;
 class Solution {
     public static int doUnion(int arr1[], int arr2[]) {
         // Your code here
