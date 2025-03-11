@@ -12,6 +12,5 @@ public class t27 {
         System.out.println(a / b);
         System.out.println(a / b);
         System.out.println(a / b);
-
     }
 }
