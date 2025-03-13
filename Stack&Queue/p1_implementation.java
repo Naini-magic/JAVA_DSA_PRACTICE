@@ -1,5 +1,7 @@
-// import java.util.Stack;
 
+
+
+// implementing stack by linked list
 public class p1_implementation {
     private static class Node{
         int data;
