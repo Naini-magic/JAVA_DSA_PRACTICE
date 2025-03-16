@@ -71,6 +71,7 @@ public class q2_circularQ {
        q.add(5);
        System.out.println(q.remove());
        q.add(6);
+       System.out.println("break");
        System.out.println(q.remove());
        q.add(7);
 
@@ -78,6 +79,5 @@ public class q2_circularQ {
        while(!q.isEmpty()) {
            System.out.println(q.remove());
        }
-
     }
 }

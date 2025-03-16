@@ -1,86 +1,69 @@
-public import java.util.Queue;
 
-public class q2_circularQ {
-    static class QueueC {
-    static int arr[];
-    static int size;
-    static int front = -1;
-    static int rear = -1;
+public class q3 {
 
-    QueueC (int size) {
-        this.size = size;
-        arr = new int[size];
+    static class Node {
+        int value;
+        Node next;
+
+        Node(int value) {
+            this.value = value;
+            next = null;
+        }
     }
 
-    public static boolean isEmpty(){
-        return rear == -1 && front == -1;
-    }
+    static class Queue_linklist {
+        static Node head = null;
+        static Node tail = null;
 
-    public static boolean isFull(){
-        return (rear + 1) % size == front ;
-    }
-
-    public static void add(int data) {
-        if(isFull()){
-            System.out.println("Overflow");
-            return;
+        public static boolean isEmpty() {
+            return head == null && tail == null;
         }
 
-        // if it's the 1st element
-         if(front == -1){
-            front = 0;
-         }
-
-         rear = (rear + 1) % size;
-         arr[rear] = data;
-
-    }
-
-    public static int remove() {
-        if(isEmpty()){
-            System.out.println("empty queue");
-            return -1;
+        public static void add(int data) {
+            Node n = new Node(data);
+            if (isEmpty()) {
+                head = tail = n;
+            } else {
+                tail.next = n;
+                tail = n;
+            }
         }
 
-        int res = arr[front];
+        public static int remove() {
+            if (isEmpty()) {
+                System.out.println("Already empty");
+                return -1;
+            }
+            int front = head.value;
+            if (head == tail) {
+                head = tail = null;
+            } else {
+                head = head.next;
+            }
 
-    //if only 1 element is present\
-        if(front == rear) {
-            front = rear = -1;
-        }else{
-            front = (front + 1) % size;
+            return front;
         }
-        return res;
+
+        public static int peek() {
+            if (head == null) {
+                System.out.println("empty");
+                return -1;
+            }
+            return head.value;
+        }
     }
 
-    public static int peek() {
-        if (isEmpty()) {
-            System.out.println("Empty Queue");
-            return -1;
-        }
-        return arr[front];
-    }
-        
-    }
     public static void main(String[] args) {
-         QueueC q = new QueueC(5);
-       q.add(1);
-       q.add(2);
-       q.add(3);
-       q.add(4);
-       q.add(5);
-       System.out.println(q.remove());
-       q.add(6);
-       System.out.println(q.remove());
-       q.add(7);
-
-
-       while(!q.isEmpty()) {
-           System.out.println(q.remove());
-       }
-
+        Queue_linklist Q = new Queue_linklist();
+        Q.add(1);
+        Q.add(2);
+        Q.add(3);
+        Q.add(4);
+        Q.add(5);
+        Q.add(6);
+        while (!Q.isEmpty()) {
+            System.out.println(Q.peek());
+            Q.remove();
+        }
     }
-}
- q3 {
-    
 }
