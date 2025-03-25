@@ -1,26 +1,36 @@
+import java.util.Stack;
+
 public class p17 {
-    import java.util.Stack;
+    public static int Valid_Paranthesis(String st) {
+        int max = 0;
+        Stack<Integer> ele = new Stack<>();
+        ele.push(-1);
+        for (int i = 0; i < st.length(); i++) {
 
-public class p16_Histogram {
-    public static int largestRectangleArea(int[] heights) {
-        int n = heights.length;
-        Stack<Integer> stack = new Stack<>();
-        int maxArea = 0;
-
-        for (int i = 0; i <= n; i++) {
-            int height = (i == n) ? 0 : heights[i];
-
-            while (!stack.isEmpty() && heights[stack.peek()] > height) {
-                int h = heights[stack.pop()];
-                int width = stack.isEmpty() ? i : i - stack.peek() - 1;
-                maxArea = Math.max(maxArea, h * width);
+            if (st.charAt(i) == '(') {
+                ele.push(i);
+            } else {
+                ele.pop();
+                if (!ele.isEmpty()) {
+                    max = Math.max(max, i - ele.peek());
+                } else {
+                    ele.push(i);
+                }
             }
-
-            stack.push(i);
         }
-
-        return maxArea;
+        return max;
     }
-}
 
+    public static void main(String[] args) {
+        String s = "(())(";
+        System.out.println(Valid_Paranthesis(s));
+        s = "(()(";
+        System.out.println(Valid_Paranthesis(s));
+        s = "()(())(";
+        System.out.println(Valid_Paranthesis(s));
+        s = "(()())";
+        System.out.println(Valid_Paranthesis(s));
+        s = "(()())()()()()((((((((())))))))))()()()()()()))))))))))))))))))(((((((((((((((())))))))))))))))))((((((((((((((((())))))))))))))))))))()()()()()()()()()()()()(";
+        System.out.println(Valid_Paranthesis(s));
+    }
 }
