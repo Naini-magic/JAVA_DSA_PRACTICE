@@ -1,4 +1,4 @@
-import java.util.Queue;
+public import java.util.Queue;
 
 
 
@@ -84,4 +84,7 @@ public class q2_circularQ {
            System.out.println(q.remove());
        }
     }
+}
+ q6 {
+    
 }
