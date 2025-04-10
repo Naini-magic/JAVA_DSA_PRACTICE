@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 public class q10_negIn{
      public static List<Integer> firstNegInt(int arr[], int k) {
