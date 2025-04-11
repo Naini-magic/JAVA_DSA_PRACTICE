@@ -2,7 +2,6 @@ public class p6Kadane_Algo {
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, -2, 5 };
         int arr2[] = { -1, 1, -3, -4 };
-
         int arr3[] = { 2, 3, -8, 7, -1, 2, 3 };
         System.out.println(max(arr));
         System.out.println(max(arr2));
@@ -21,20 +20,4 @@ public class p6Kadane_Algo {
         }
         return maxSum;
     }
-
-      // int maxSum = Integer.MIN_VALUE ;
-        // int curSum = 0 ;
-        // for(int i = 0 ; i < arr.length ; i++){
-        // curSum = curSum + arr[i];
-
-        // if(curSum >= maxSum){
-        // maxSum = curSum;
-        // }
-        // if(curSum < maxSum ){
-        // curSum = 0;
-        // }
-        // }
-        // return maxSum;
-        //
-
 }

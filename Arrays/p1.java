@@ -4,22 +4,28 @@ public class p1 {
         int[] arr1 = {0 , 2 , 1 , 2 , 0};
         System.err.println(Arrays.toString(sort(arr1)));
     }
-    static int[] sort(int arr[]){
-        int i = 0;
-      while(i < arr.length-1){
-        if(arr[i] == arr[i+1]){
-            i++;
+    public static int[] sort(int arr[]){
+        int low = 0;
+        int mid = 0;
+        int high = arr.length-1;
+        while(mid <= high){
+            if(arr[mid] == 0){
+             swap(arr , low , mid);
+             mid++;
+             low++;
+            }else if(arr[mid] == 1){
+                mid++;
+            }else{
+                swap(arr , mid , high);
+                high--;
+            }
         }
-        if(arr[i] > arr[i+1]){
-            int temp = arr[i];
-            arr[i] = arr[i+1];
-            arr[i+1] = temp;
-            i++;
-        }
-        else{
-            i++;
-        }
-      }
-      return arr;
+        return arr;
+    }
+
+    public static void swap(int arr[] , int s , int t){
+        int temp = arr[s];
+        arr[s] = arr[t];
+        arr[t] = temp;
     }
 }

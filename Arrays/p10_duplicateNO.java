@@ -22,5 +22,4 @@ public class p10_duplicateNO {
             fast = arr[fast];
         }
         return slow;
-
 }}

@@ -64,28 +64,4 @@ public class p8_MINIMUM_Jump {
     }
     return -1;
    }
-
-
-
-    // public static int mini(int arr[]){
-    //     int i = 0 ;
-    //     int count = 0;
-    //     while(i < arr.length){
-    //         int jump =0;
-    //         if(arr[i] == 0){
-    //             return -1;
-    //         }
-    //        if(i < arr.length ){
-    //         jump = arr[i];
-    //         i = i+jump;
-    //         count++;
-    //        }
-    //        if(i >= arr.length-1){
-    //         return count;
-    //        }
-        
-
-    //     }
-    //     return count;
-    // }
 }
