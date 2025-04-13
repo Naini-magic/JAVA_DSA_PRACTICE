@@ -15,7 +15,6 @@ public class p26SmallIndex {
                 count++;
             }
         }
-
         int bad = 0;
         for (int i = 0; i < count; i++) {
             if (arr[i] > k) {

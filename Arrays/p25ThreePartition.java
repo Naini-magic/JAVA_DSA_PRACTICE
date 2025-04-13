@@ -20,7 +20,7 @@ public class p25ThreePartition {
                 arr[current] = arr[left];
                 arr[left] = temp;
                 left++;
-                current++;
+                current++;       
             } else if (arr[current] > b) {
                 int temp = arr[current];
                 arr[current] = arr[high];
