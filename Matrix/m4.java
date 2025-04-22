@@ -1,4 +1,16 @@
 public class m4 {
+    /*✅ Step-by-step summary:
+Choose mid of current range ((min + max)/2)
+
+Count how many elements ≤ mid using binary search in each row
+
+If the count is less than the desired median position, shift the min to mid + 1
+
+Else, shift max to mid
+
+When min == max, you've found the median
+
+ */
     public static int findMedian(int [][] matrix){
         int r = matrix.length;
         int c = matrix[0].length;
