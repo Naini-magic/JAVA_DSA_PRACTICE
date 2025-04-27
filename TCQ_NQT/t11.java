@@ -24,7 +24,21 @@ So total possible ways 4 members can be seated around the circular table 2*6= 12
 
 Hence, output is 12. */
 
+import java.util.Scanner;
 
 public class t11 {
-    
+    public static int PossibleWays(int n){
+        if(n <= 1){
+            return 1;
+        }
+        // int factorial = n * PossibleWays(n-1);
+
+        // System.out.println(factorial);
+        return n * PossibleWays(n-1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(2 * PossibleWays(n-1));
+    }
 }
