@@ -1,4 +1,5 @@
 public class m8 {
+    //botate by 90 degree
         static void rotate(int mat[][]) {
             int n = mat.length;
     
