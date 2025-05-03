@@ -37,7 +37,6 @@ When min == max, you've found the median
                 max = mid;
             }
         }
-
         return min;
     }
 
