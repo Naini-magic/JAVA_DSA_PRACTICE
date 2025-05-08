@@ -18,7 +18,6 @@ public class t15 {
             arr[j] = temp;
         }
 
-        // Print the (k-1)th character (since arrays are 0-indexed)
         System.out.println(arr[k - 1]);
 
     } 
