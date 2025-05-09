@@ -32,8 +32,41 @@ Explanation
 ()() is the largest valid substring which has of length 4. */
 
 public class t16 {
+
+     public static void MaxString(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // Read size of string
+        String s = sc.next(); // Read the string
+
+        Stack<Integer> stack = new Stack<>();
+        stack.push(-1); // Base for calculating length
+        int maxLength = 0;
+
+        for (int i = 0; i < n; i++) {
+            char ch = s.charAt(i);
+            if (ch == '(') {
+                stack.push(i); // Push index of '('
+            } else {
+                stack.pop(); // Pop matching '('
+                if (stack.isEmpty()) {
+                    stack.push(i); // Reset base
+                } else {
+                    int len = i - stack.peek();
+                    maxLength = Math.max(maxLength, len);
+                }
+            }
+        }
+
+        System.out.println(maxLength);
+    }
+
+
       public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+
+
+
+        //mysolution
 
      Scanner sc = new Scanner(System.in);
      int n = sc.nextInt();
