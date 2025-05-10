@@ -33,15 +33,15 @@ class Solution {
             result.next = merge2(left.next, right);
             }
             else{
-                result = right;
+            result = right;
             result.next = merge2(left, right.next);
             }
           return result;
     }
     static Node middle(Node head){
           if (head == null) return head;
-        Node slow = head;
-        Node fast = head;
+          Node slow = head;
+          Node fast = head;
          while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;

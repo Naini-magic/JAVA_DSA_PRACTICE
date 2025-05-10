@@ -33,6 +33,8 @@ Explanation
 
 public class t16 {
 
+
+    //right 
      public static void MaxString(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); // Read size of string

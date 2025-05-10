@@ -7,15 +7,15 @@ import java.util.Map;
 public class s21SecondRepeated {
     public static void main(String[] args) {
 
-        // String str[] = { "aaa", "bbb", "ccc", "bbb", "aaa", "aaa" };
-        // System.out.println( RepeatSecond(str));
-        // String st2[] = { "geek", "for", "geek", "for", "geek", "aaa" };
-        // System.out.println(RepeatSecond(st2));
-
         String str[] = { "aaa", "bbb", "ccc", "bbb", "aaa", "aaa" };
-        System.out.println(Repeat(str));
+        System.out.println( RepeatSecond(str));
         String st2[] = { "geek", "for", "geek", "for", "geek", "aaa" };
-        System.out.println(Repeat(str));
+        System.out.println(RepeatSecond(st2));
+
+        // String str[] = { "aaa", "bbb", "ccc", "bbb", "aaa", "aaa" };
+        // System.out.println(Repeat(str));
+        // String st2[] = { "geek", "for", "geek", "for", "geek", "aaa" };
+        // System.out.println(Repeat(st2));
 
     }
 

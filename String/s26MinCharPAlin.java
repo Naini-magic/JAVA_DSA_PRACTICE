@@ -1,4 +1,6 @@
 public class s26MinCharPAlin {
+
+    /* Given a string s, determine the minimum number of characters that need to be added to the front of the string so that the entire string becomes a palindrome. */
     public static void main(String[] args) {
         String s = "abc";
         System.out.println(minChar(s));
@@ -9,7 +11,7 @@ public class s26MinCharPAlin {
     }
 
     public static int minChar(String s) {
-        // Write your code here
+        
         String rever = new StringBuilder(s).reverse().toString();
         String temp = s + '#' + rever;
         int lps[] = buildLps(temp);

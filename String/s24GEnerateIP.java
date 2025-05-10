@@ -46,7 +46,7 @@ public class s24GEnerateIP {
             return false;
         }
 
-        int value = Integer.parseInt(part);
+        int value = Integer.parseInt(part);    //String to integer
         return value >= 0 && value <= 255;
     }
 

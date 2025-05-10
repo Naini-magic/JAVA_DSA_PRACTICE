@@ -9,6 +9,10 @@ public class s16BoyerMoore {
         kmpPattern(p1, s1);
     }
 
+
+    /*The algorithm implemented in your code is not the Boyer-Moore algorithm — despite the class name s16BoyerMoore.
+Instead, it implements the Knuth-Morris-Pratt (KMP) algorithm for pattern matching in strings. */
+
     public static void kmpPattern(String pattern , String string){
          int lp = pattern.length();
          int ls = string.length();
