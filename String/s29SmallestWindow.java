@@ -1,5 +1,10 @@
 import java.util.HashMap;
 
+
+/*
+ Given two strings s1 and s2, find the smallest window (substring) in s1 that contains all characters of s2 (including duplicates).
+If no such window exists, return -1.
+ */
 public class s29SmallestWindow {
     public static void main(String[] args) {
         String s1 = "timetopractice", s2 = "toc";
