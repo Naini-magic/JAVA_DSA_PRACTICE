@@ -6,18 +6,18 @@ import java.util.*;
 class Node {
     int data;
     Node left, right;
-
+    
     Node(int value) {
         this.data = value;
         left = right = null;
     }
 }
 
-public class t1_LevelOrderTraversal {
+public class t2_reverseorder {
 
-    public List<List<Integer>> levelOrder(Node root) {
+    public ArrayList<Integer> reverseOrder(Node root) {
 
-        List<List<Integer>> result = new ArrayList<>();
+        ArrayList<Integer> result = new ArrayList<>();
         if (root == null) return result;
 
         Queue<Node> queue = new LinkedList<>();
@@ -27,19 +27,19 @@ public class t1_LevelOrderTraversal {
 
         while (!queue.isEmpty()) {
             int size = queue.size(); // Number of nodes at current level
-            List<Integer> currentLevel = new ArrayList<>();
+            // List<Integer> currentLevel = new ArrayList<>();
 
             for (int i = 0; i < size; i++) {
                 Node curr = queue.poll();
-                currentLevel.add(curr.data);
+                result.add(curr.data);
 
-                if (curr.left != null) queue.offer(curr.left);
                 if (curr.right != null) queue.offer(curr.right);
-            }
+                if (curr.left != null) queue.offer(curr.left);
 
-            result.add(currentLevel);
+            }
         }
 
+        Collections.reverse(result);
         return result;
     }
 
@@ -61,12 +61,15 @@ public class t1_LevelOrderTraversal {
         root.right.left = new Node(5);
         root.right.right = new Node(6);
 
-        t1_LevelOrderTraversal tree = new t1_LevelOrderTraversal();
-        List<List<Integer>> result = tree.levelOrder(root);
+        t2_reverseorder tree = new t2_reverseorder();
+        ArrayList<Integer> result = tree.reverseOrder(root);
 
         // Print the result
-        for (List<Integer> level : result) {
-            System.out.println(level);
-        }
+        for (Integer val : result) {
+    System.out.println(val);
+}
+
     }
-} 
+
+
+}
