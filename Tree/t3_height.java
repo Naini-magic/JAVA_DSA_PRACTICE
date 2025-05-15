@@ -15,4 +15,26 @@ public class t3_height {
         
         return 1 + Math.max(ls , rs);
     }
+
+
+     public static void main(String[] args) {
+        // Manually constructing the tree: [12, 8, 18, 5, 11]
+        /*
+                  12
+                 /  \
+                8    18
+               / \
+              5  11
+        */
+
+        Node root = new Node(12);
+        root.left = new Node(8);
+        root.right = new Node(18);
+        root.left.left = new Node(5);
+        root.left.right = new Node(11);
+
+        t3_height solution = new t3_height();
+        int treeHeight = solution.height(root);
+        System.out.println("Height of the tree (in edges): " + treeHeight);
+    }
 }
