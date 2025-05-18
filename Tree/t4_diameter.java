@@ -45,15 +45,5 @@ public class t4_diameter {
                   3   7    9
          */
 
-        Node root = new Node(5);
-        root.left = new Node(8);
-        root.right = new Node(6);
-        root.left.left = new Node(3);
-        root.left.right = new Node(7);
-        root.right.right = new Node(9);
-
-        t4_diameter sol = new t4_diameter();
-        int result = sol.diameter(root);
-        System.out.println("Diameter of the tree (in edges): " + result);
-    }
+  
 }
