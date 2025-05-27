@@ -26,7 +26,6 @@ public class s9Permutation {
     }
 }
 
-
 /*
                                    ("ABC", "")
                           /            |            \
