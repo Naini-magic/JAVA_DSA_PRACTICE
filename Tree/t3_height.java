@@ -15,8 +15,6 @@ public class t3_height {
         
         return 1 + Math.max(ls , rs);
     }
-
-
      public static void main(String[] args) {
         // Manually constructing the tree: [12, 8, 18, 5, 11]
         /*
