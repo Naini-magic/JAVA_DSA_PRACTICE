@@ -22,7 +22,7 @@ public class merge {
                
         divide(arr, start, mid);
         divide(arr, mid + 1, end);
-        System.out.println(Arrays.toString(arr));
+        // System.out.println(Arrays.toString(arr));
         conquer(arr, start, mid, end);
         
     }

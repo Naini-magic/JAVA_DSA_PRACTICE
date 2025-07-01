@@ -10,7 +10,7 @@ public class p14_insertAtBottom {
             st.push(a);         // Push the stored element back
         }
     } 
-
+        
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
         st.push(1);
