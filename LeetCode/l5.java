@@ -20,6 +20,7 @@ public class l5 {
 
         // Step 2: Split words by one or more spaces
         String[] words = s.split("\\s+");
+              
 
         // Step 3: Reverse the words array
         Collections.reverse(Arrays.asList(words));
